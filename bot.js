@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 const db = process.env.MONGOURI
 const PREFIX = '!';
-const secretWord = ["elevator"];
+const secretWord = [process.env.SECRET_WORD];
 const j = process.env.DISCORD_ID
 let mentionString = `<@!${j}>`;
 
