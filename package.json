@@ -1,0 +1,30 @@
+{
+  "name": "bottutorial",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "devStart": "nodemon bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0",
+    "fs": "*",
+    "giphy-api": "^2.0.1",
+    "mongodb": "^3.6.8",
+    "mongoose": "^5.12.10",
+    "nodemon": "^2.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeganFuhr/Insult-J.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MeganFuhr/Insult-J/issues"
+  },
+  "homepage": "https://github.com/MeganFuhr/Insult-J#readme",
+  "description": ""
+}
