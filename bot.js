@@ -59,15 +59,25 @@ client.on('message', msg => {
     if (command === 'sopranos') { 
         client.commands.get('sopranos').execute(msg, args)
     }
-    if (command === 'add-insult' && msg.author != j) {
+    if (command === 'add-insult') {
+        if (msg.author != j){
         insult = (msg.content.split("!add-insult").pop())
         client.commands.get('add-insult').execute(msg, insult.trim())
+        }
+        else {
+            msg.channel.send(`You are not authorized to add insults, ${msg.author}`)
+        }
     }
-    if (command === 'add-quote' && msg.author == j) {
-        quote = (msg.content.split("!add-quote").pop());
-        client.commands.get('add-quote').execute(msg, quote.trim())
+    if (command === 'add-quote') {
+        if (msg.author == j){
+            quote = (msg.content.split("!add-quote").pop());
+            client.commands.get('add-quote').execute(msg, quote.trim())
+        }
+        else{
+            msg.channel.send(`You are not authorized to add quotes, ${msg.author}`)
+        }
     }
-    if (command === 'add-praise' && msg.author != j) {
+    if (command === 'add-praise') {
         praise = (msg.content.split("!add-praise").pop());
         client.commands.get('add-praise').execute(msg, praise.trim())
     }
