@@ -44,6 +44,9 @@ client.on('message', msg => {
         }
 
     }
+    if(command === 'help') {
+        client.commands.get('help').execute(msg, args)
+    }
     if (command === 'insult-j') { 
          client.commands.get('insult-j').execute(msg, mentionString)
     }
